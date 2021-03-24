@@ -54,7 +54,7 @@ var cognomiOrdinati = arrayCognomi.sort(function(a,b) {
 // Scorro la lista ordinata e stampo i suoi elementi in delle <li>
 var i = 0;
 
-var posizioneCognome = -1;
+var posizioneCognomeUtente = -1;
 
 while (i < cognomiOrdinati.length) {
     var thisCognome = cognomiOrdinati[i];
