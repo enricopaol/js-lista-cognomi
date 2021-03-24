@@ -22,28 +22,58 @@ var cognomiOrdinati = arrayCognomi.sort(function(a,b) {
 }); 
 // console.log(cognomiOrdinati);
 
-// Scorro la lista ordinata e stampo i suoi elementi in delle <li> 
-var posizioneCognomeUtente = -1;
 
-for (var i = 0; i < cognomiOrdinati.length; i++) {
-    thisCognome = cognomiOrdinati[i];
-    // console.log(thisCognome);
+// // Ciclo For
+
+// // Scorro la lista ordinata e stampo i suoi elementi in delle <li> 
+// var posizioneCognomeUtente = -1;
+
+// for (var i = 0; i < cognomiOrdinati.length; i++) {
+//     thisCognome = cognomiOrdinati[i];
+//     // console.log(thisCognome);
+
+//     var contenutoAttualeLista = document.getElementById('lista-cognomi').innerHTML;
+//     document.getElementById('lista-cognomi').innerHTML = contenutoAttualeLista + '<li>' + thisCognome + '</li>';
+//     // console.log(contenutoAttualeLista);
+
+//     // In versione abbreviata sarebbe:
+//     // var contenutoAttualeLista = document.getElementById('lista-cognomi').innerHTML += '<li>' + thisCognome + '</li>';
+
+//     if (cognomeUtente == thisCognome) {
+//         posizioneCognomeUtente = i + 1; // Salvo l'indice in una variabile
+//     }
+// }
+
+
+// // Stampo il messaggio
+// alert('Il tuo cognome si trova nella ' + posizioneCognomeUtente + 'º posizione');
+
+
+// Ciclo While
+
+// Scorro la lista ordinata e stampo i suoi elementi in delle <li>
+var i = 0;
+
+var posizioneCognome = -1;
+
+while (i < cognomiOrdinati.length) {
+    var thisCognome = cognomiOrdinati[i];
 
     var contenutoAttualeLista = document.getElementById('lista-cognomi').innerHTML;
     document.getElementById('lista-cognomi').innerHTML = contenutoAttualeLista + '<li>' + thisCognome + '</li>';
-    // console.log(contenutoAttualeLista);
-
-    // In versione abbreviata sarebbe:
-    // var contenutoAttualeLista = document.getElementById('lista-cognomi').innerHTML += '<li>' + thisCognome + '</li>';
+    console.log(contenutoAttualeLista);
 
     if (cognomeUtente == thisCognome) {
         posizioneCognomeUtente = i + 1; // Salvo l'indice in una variabile
     }
+
+    i++;
 }
 
-
 // Stampo il messaggio
-alert('Il tuo cognome si trova nella ' + posizioneCognomeUtente + 'º' + ' posizione');
+alert('Il tuo cognome si trova nella ' + posizioneCognomeUtente + 'º posizione');
+
+
 
 
 
