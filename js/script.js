@@ -37,10 +37,12 @@ for (var i = 0; i < cognomiOrdinati.length; i++) {
     // var contenutoAttualeLista = document.getElementById('lista-cognomi').innerHTML += '<li>' + thisCognome + '</li>';
 
     if (cognomeUtente == thisCognome) {
-        posizioneCognomeUtente = i + 1;
+        posizioneCognomeUtente = i + 1; // Salvo l'indice in una variabile
     }
 }
 
+
+// Stampo il messaggio
 alert('Il tuo cognome si trova nella ' + posizioneCognomeUtente + 'º' + ' posizione');
 
 
